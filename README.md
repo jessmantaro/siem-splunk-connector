@@ -27,6 +27,8 @@ Akamai’s Splunk Connector requires Sun JRE 1.8+ to be installed. Download the 
 
 You must have Java installed on the host running Splunk Enterprise [https://java.com/en/download/](https://java.com/en/download/)
 
+You must install KVStore on the host machine where you want to install your connector. 
+
 Also, check to make sure that splunk forwarder is NOT installed on your Splunk Enterprise host machine.
 
 #### Proxy server
