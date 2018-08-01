@@ -1,15 +1,16 @@
 # Set up Splunk connector 
 
-[Version 1.3.0](#3) June 2018
+[Version 1.3.0](#3) August 2018
 
 <a href="#2">Version 1.2.0</a>  October 2017
 
 <h2 id="3">Version 1.3.0</h2><a name="3"></a>
 
->**Update:** Version 1.3.0 of the sample Splunk Connector was released in June 2018. Changes include:
+>**Update:** Version 1.3.0 of the sample Splunk Connector was released in August 2018. Changes include:
 
 >*   You can now set log level. For example, if you have a problem, switch to DEBUG mode.
 >*   You no longer need to enter your Splunk username and password.
+>*   Client secret is encrypted and is hidden in the Splunk interface.
 >*   Fixed input validation issue.
 >*   Fixed an issue with SLF4J logging exceptions.
 >*   Tested on Splunk's new released version 7.1.0.
@@ -83,6 +84,9 @@ To send Akamai security events to Splunk® instance, download and install the Ak
     *   **Limit**. If you want to limit the number of security events to pull, you can enter a number here to limit the results for each REST call. If not specified, the API retrieves a maximum of 150000 records per call.
     *   **log level** is automatically set to INFO. You can change it to WARN, ERROR, FATAL, or DEBUG to get more data for certain situations. For example, if you have a problem with the connector, type DEBUG to get more detailed messages and troubleshoot.
     *   **Interval**. Number of seconds between fetch requests. Enter 60, unless you have entered values in both **Initial Epoch Time** and **Final Epoch Time** to retrieve security events from a set time period. In that case, enter 0\.
+    
+   > _**Note:** If it takes more than 60 seconds to fetch the data, then increase the interval value to the amount of seconds it takes to fetch the data._ 
+    
 13.  Return to Splunk home and click **Akamai SIEM**.
     If you see data, setup was successful.
     
